@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="MusicTrackCell" rowHeight="76" id="2K1-Yo-2xm" customClass="MusicTrackCell" customModule="MusicChill" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2K1-Yo-2xm" id="FAO-xg-fzl">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thambnail" translatesAutoresizingMaskIntoConstraints="NO" id="MAa-SI-5FT">
+                        <rect key="frame" x="8" y="7" width="76" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="MAa-SI-5FT" secondAttribute="height" multiplier="19:15" id="RLO-3L-QGM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sgq-3G-uOf">
+                        <rect key="frame" x="92" y="7" width="176" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edi-Li-RqZ">
+                        <rect key="frame" x="92" y="51" width="176" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="m2V-Kt-uSo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.098039215690000001" green="0.47058823529999999" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sgq-3G-uOf" secondAttribute="trailing" constant="5" id="5eg-8E-VXf"/>
+                    <constraint firstItem="sgq-3G-uOf" firstAttribute="leading" secondItem="MAa-SI-5FT" secondAttribute="trailing" constant="8" id="K3T-jd-R1L"/>
+                    <constraint firstAttribute="bottom" secondItem="MAa-SI-5FT" secondAttribute="bottom" constant="8" id="LpQ-QW-U3S"/>
+                    <constraint firstAttribute="bottom" secondItem="edi-Li-RqZ" secondAttribute="bottom" constant="7" id="Nho-HR-O8F"/>
+                    <constraint firstItem="edi-Li-RqZ" firstAttribute="leading" secondItem="MAa-SI-5FT" secondAttribute="trailing" constant="8" id="guf-fN-dRx"/>
+                    <constraint firstItem="sgq-3G-uOf" firstAttribute="top" secondItem="FAO-xg-fzl" secondAttribute="top" constant="7" id="hKc-GQ-YVj"/>
+                    <constraint firstItem="MAa-SI-5FT" firstAttribute="leading" secondItem="FAO-xg-fzl" secondAttribute="leading" constant="8" id="nJV-du-JRk"/>
+                    <constraint firstItem="edi-Li-RqZ" firstAttribute="top" secondItem="sgq-3G-uOf" secondAttribute="bottom" id="oRU-Ui-Mgi"/>
+                    <constraint firstItem="MAa-SI-5FT" firstAttribute="top" secondItem="FAO-xg-fzl" secondAttribute="top" constant="7" id="sKK-EF-80H"/>
+                    <constraint firstAttribute="trailing" secondItem="edi-Li-RqZ" secondAttribute="trailing" constant="5" id="zUO-o1-Sxn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="edi-Li-RqZ" id="qXb-7U-zWr"/>
+                <outlet property="artworkImageView" destination="MAa-SI-5FT" id="R3T-cZ-IsY"/>
+                <outlet property="songNameLabel" destination="sgq-3G-uOf" id="9we-tj-BPX"/>
+            </connections>
+            <point key="canvasLocation" x="237" y="94"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="thambnail" width="222" height="226"/>
+    </resources>
+</document>

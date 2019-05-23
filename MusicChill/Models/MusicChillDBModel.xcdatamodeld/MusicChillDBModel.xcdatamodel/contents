@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="CreatedWithManagedObjectModel" representedClassName="CreatedWithManagedObjectModel" syncable="YES">
+        <attribute name="creator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="external_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalink_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PlaylistManagedObjectBaseModel" representedClassName=".PlaylistManagedObjectBaseModel" syncable="YES">
+        <attribute name="artwork_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachments_uri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bpm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="commentable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionTxt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="download_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="downloadable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="embeddable_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoritings_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isrc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="key_signature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_modified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="license" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="original_content_size" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="original_format" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalink_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playback_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="purchase_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purchase_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="release_day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="release_month" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="release_year" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseTxt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sharing" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stream_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streamable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="tag_list" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="track_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="video_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="waveform_url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserManagedObjectModel" syncable="YES"/>
+    </entity>
+    <entity name="PlaylistManagedObjectModel" representedClassName="PlaylistManagedObjectModel" parentEntity="PlaylistManagedObjectBaseModel" syncable="YES">
+        <attribute name="ean" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playlist_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shuffleModeON" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="track_count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="created_with" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedWithManagedObjectModel" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TrackManagedObjectModel" inverseName="playlists" inverseEntity="TrackManagedObjectModel" syncable="YES"/>
+    </entity>
+    <entity name="TrackManagedObjectModel" representedClassName="TrackManagedObjectModel" parentEntity="PlaylistManagedObjectBaseModel" syncable="YES">
+        <relationship name="playlists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlaylistManagedObjectModel" inverseName="tracks" inverseEntity="PlaylistManagedObjectModel" syncable="YES"/>
+    </entity>
+    <entity name="UserManagedObjectModel" representedClassName="UserManagedObjectModel" syncable="YES">
+        <attribute name="avatar_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_modified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permalink_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CreatedWithManagedObjectModel" positionX="-3375" positionY="-2587" width="216" height="148"/>
+        <element name="PlaylistManagedObjectBaseModel" positionX="-3366" positionY="-2349" width="189" height="703"/>
+        <element name="PlaylistManagedObjectModel" positionX="-3690" positionY="-2565" width="173" height="148"/>
+        <element name="TrackManagedObjectModel" positionX="-3717" positionY="-2241" width="171" height="58"/>
+        <element name="UserManagedObjectModel" positionX="-3654" positionY="-1936" width="173" height="163"/>
+    </elements>
+</model>

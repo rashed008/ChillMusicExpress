@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayListDetailsTableViewHeader" customModule="MusicChill" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZC-ER-Kni" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="demoart" translatesAutoresizingMaskIntoConstraints="NO" id="I3a-I6-1mt">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="I3a-I6-1mt" firstAttribute="leading" secondItem="YZC-ER-Kni" secondAttribute="leading" id="3O4-LJ-p07"/>
+                        <constraint firstAttribute="trailing" secondItem="I3a-I6-1mt" secondAttribute="trailing" id="C1P-oa-D0t"/>
+                        <constraint firstItem="I3a-I6-1mt" firstAttribute="top" secondItem="YZC-ER-Kni" secondAttribute="top" id="qyA-Qj-kZN"/>
+                        <constraint firstAttribute="bottom" secondItem="I3a-I6-1mt" secondAttribute="bottom" id="wpW-Qn-xcG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="YZC-ER-Kni" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H7x-zC-j3Z"/>
+                <constraint firstItem="YZC-ER-Kni" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ixm-kT-Bnh"/>
+                <constraint firstAttribute="trailing" secondItem="YZC-ER-Kni" secondAttribute="trailing" id="cGe-UG-O9c"/>
+                <constraint firstAttribute="bottom" secondItem="YZC-ER-Kni" secondAttribute="bottom" id="zTg-qe-bA0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="artworkImageView" destination="I3a-I6-1mt" id="9de-b1-xFT"/>
+            </connections>
+            <point key="canvasLocation" x="357" y="344"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="demoart" width="499" height="499"/>
+    </resources>
+</document>
